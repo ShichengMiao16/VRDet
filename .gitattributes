@@ -1,0 +1,2 @@
+checkpoint/vrdet_r50_fpn_1x_dior-r.pth filter=lfs diff=lfs merge=lfs -text
+checkpoint/vrdet_r50_fpn_1x_dota.pth filter=lfs diff=lfs merge=lfs -text
