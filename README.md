@@ -2,7 +2,7 @@
 
 ## Introduction
 
-VRDet is the implementation of the object detector proposed in the paper of "Precise Vertex Regression and Feature Decoupling for Oriented Object Detection",
+VRDet is the implementation of the oriented object detector for Precise Vertex Regression and Feature Decoupling for Oriented Object Detection,
 which is based on [mmdetection](https://github.com/open-mmlab/mmdetection) and [BboxToolkit](https://github.com/jbwang1997/BboxToolkit).
 
 ## Detection visualization results
