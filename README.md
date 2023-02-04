@@ -4,7 +4,8 @@
 
 VRDet is the implementation of the oriented object detector for Precise Vertex Regression and Feature Decoupling for Oriented Object Detection.
 
-## Detection visualization results
+## Visualized detection results
+
 ![demo image](demo/obbdet_show.jpg)
 
 ## Installation
