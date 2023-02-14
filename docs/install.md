@@ -2,7 +2,7 @@
 
 ### Requirements
 
-- Linux or macOS (Windows is not supported)
+- Linux
 - Python 3.6+
 - PyTorch 1.3+
 - CUDA 9.2+
@@ -30,14 +30,14 @@ You can check the supported CUDA version for precompiled packages on the [PyTorc
 `e.g.` If you have CUDA 10.1 installed under `/usr/local/cuda` and would like to install
 PyTorch 1.6.0, you need to install the prebuilt PyTorch with CUDA 10.1.
 
-```python
+```shell
 conda install pytorch=1.6.0 cudatoolkit=10.1 torchvision=0.7.0 -c pytorch
 ```
 
 `e.g.` If you have CUDA 9.2 installed under `/usr/local/cuda` and would like to install
 PyTorch 1.3.1., you need to install the prebuilt PyTorch with CUDA 9.2.
 
-```python
+```shell
 conda install pytorch=1.3.1 cudatoolkit=9.2 torchvision=0.4.2 -c pytorch
 ```
 
@@ -66,12 +66,6 @@ pip install mmcv==0.6.2
 python setup.py develop  # or "pip install -v -e ."
 ```
 
-If you build VRDet on macOS, replace the last command with
-
-```
-CC=clang CXX=clang++ CFLAGS='-stdlib=libc++' pip install -e .
-```
-
 Note:
 
 1. The git commit id will be written to the version number with step d. The version will also be saved in trained models.
@@ -79,7 +73,7 @@ It is recommended that you run step d each time you pull some updates from githu
 
     > Important: Be sure to remove the `./build` folder if you reinstall mmdet with a different CUDA/PyTorch version.
 
-    ```
+    ```shell
     pip uninstall mmdet
     rm -rf ./build
     find . -name "*.so" | xargs rm
@@ -91,6 +85,8 @@ It is recommended that you run step d each time you pull some updates from githu
 you can install it before installing MMCV.
 
 4. Some dependencies are optional. Simply running `pip install -v -e .` will only install the minimum runtime requirements. To use optional dependencies like `albumentations` and `imagecorruptions` either install them manually with `pip install -r requirements/optional.txt` or specify desired extras when calling `pip` (e.g. `pip install -v -e .[optional]`). Valid keys for the extras field are: `all`, `tests`, `build`, and `optional`.
+
+5. If you install torchvision < 0.5.0, please run `pip install "pillow<9"` to avoid `ImportError`.
 
 ### Install with CPU only
 The code can be built for CPU only environment (where CUDA isn't available).
