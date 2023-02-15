@@ -38,7 +38,7 @@ We implemented some tools using BboxToolkit in `BboxToolkit/tools/`.
 ```shell
 python img_split.py --base_json split_configs/dota/train.json
 
-# ``or``
+# or use the following command
 
 python image_split.py --load_type dota --img_dirs {image path} --ann_dirs {annotation path} --sizes 1024 --gaps 200 --save_dir {saving path}
 ```
@@ -97,7 +97,7 @@ python visualize.py --load_type dota_submission --img_dir {image path} --ann_dir
 
 - If your want different colors for different classes, you can modify the `colors` in json or command. `colors` recives a filepath or str of colors splitting by `|`.
 
-- In json, we only show the `dota_submission` case, which can visualize the detection results on dota. For other cases, you can change load_type to visualize datasets or splitted `.pkl`.
+- In json, we only show the `dota_submission` case, which can visualize the detection results on dota. For other cases, you can change `load_type` to `pkl`.
 
 ### cal_mAP
 
