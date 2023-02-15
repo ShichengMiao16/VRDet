@@ -91,7 +91,7 @@ you can install it before installing MMCV.
 ### Install with CPU only
 The code can be built for CPU only environment (where CUDA isn't available).
 
-In CPU mode you can run the demo/webcam_demo.py for example.
+In CPU mode you can run the `$VRDet/demo/webcam_demo.py` for example.
 However some functionality is gone in this mode:
 
 - Deformable Convolution
