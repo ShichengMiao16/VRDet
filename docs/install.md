@@ -76,7 +76,7 @@ It is recommended that you run step d each time you pull some updates from githu
     ```shell
     pip uninstall mmdet
     rm -rf ./build
-    find . -name "*.so" | xargs rm
+    find . -name "*.so" |xargs rm
     ```
 
 2. Following the above instructions, VRDet is installed on `dev` mode, any local modifications made to the code will take effect without the need to reinstall it (unless you submit some commits and want to update the version number).
