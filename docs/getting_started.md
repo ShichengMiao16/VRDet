@@ -94,7 +94,7 @@ You can use the following commands to train a model.
 python tools/train.py ${CONFIG_FILE} [optional arguments]
 
 # multi-gpu training
-./tools/dist_train.sh ${CONFIG_FILE} ${GPU_NUM} [optional arguments]
+bash tools/dist_train.sh ${CONFIG_FILE} ${GPU_NUM} [optional arguments]
 ```
 
 **Note**: The initial learing rate is set to 0.005 with the batch size of 2. 
@@ -103,14 +103,11 @@ according to the [Linear Scaling Rule](https://arxiv.org/abs/1706.02677).
 
 ### Testing
 
-You can use the following commands to test a model.
+You can use the following command to test a model.
 
 ```shell
 # single-gpu testing
 python tools/test.py ${CONFIG_FILE} ${CHECKPOINT_FILE} [--out ${RESULT_FILE}] [--eval ${EVAL_METRICS}] [--show]
-
-# multi-gpu testing
-./tools/dist_test.sh ${CONFIG_FILE} ${CHECKPOINT_FILE} ${GPU_NUM} [--out ${RESULT_FILE}] [--eval ${EVAL_METRICS}]
 ```
 
 **Note**: If you want to test a model on DOTA dataset, the following command is able to directly 
@@ -127,7 +124,7 @@ We provide demo scripts to test images in DOTA and DIOR-R datasets.
 
 ### Image demo for DOTA dataset
 
-`huge_image_demo.py` is provided to test a single image in DOTA dataset.
+`$VRDet/demo/huge_image_demo.py` is provided to test a single image in DOTA dataset.
 
 ```shell
 python demo/huge_image_demo.py ${IMAGE_FILE} ${CONFIG_FILE} ${CHECKPOINT_FILE} ${SPLIT_CONFIG_FILE} \
@@ -142,7 +139,7 @@ python demo/huge_image_demo.py demo/dota_demo.png configs/vrdet/vrdet_r50_fpn_1x
 
 ### Image demo for DIOR-R dataset
 
-`image_demo.py` is provided to test a single image in DIOR-R dataset.
+`$VRDet/demo/image_demo.py` is provided to test a single image in DIOR-R dataset.
 
 ```shell
 python demo/image_demo.py ${IMAGE_FILE} ${CONFIG_FILE} ${CHECKPOINT_FILE} \
