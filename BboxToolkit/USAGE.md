@@ -39,8 +39,7 @@ We implemented some tools using BboxToolkit in `BboxToolkit/tools/`.
 python img_split.py --base_json split_configs/dota/train.json
 
 # or use the following command
-
-python image_split.py --load_type dota --img_dirs {image path} --ann_dirs {annotation path} --sizes 1024 --gaps 200 --save_dir {saving path}
+python img_split.py --load_type dota --img_dirs {image path} --ann_dirs {annotation path} --sizes 1024 --gaps 200 --save_dir {saving path}
 ```
 
 The structure of splitted dataset:
