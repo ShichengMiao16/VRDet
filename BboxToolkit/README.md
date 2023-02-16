@@ -1,7 +1,7 @@
 # BboxToolkit
 
 BboxToolkit is a light codebase collecting some practical functions for oriented object detection.
-The whole project is written in python, which can run in different platforms without compliation.
+The whole project is written in python, which can run in different platforms without compilation.
 
 ## Main Features
 

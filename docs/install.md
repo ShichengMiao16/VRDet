@@ -56,14 +56,14 @@ d. Install build requirements and then install VRDet.
 ```shell
 # install BboxToolkit
 cd BboxToolkit
-python setup.py develop  # or "pip install -v -e ."
+pip install -v -e .  # or "python setup.py develop"
 cd ..
 
 # install VRDet
 pip install -r requirements/build.txt
 pip install pycocotools
 pip install mmcv==0.6.2
-python setup.py develop  # or "pip install -v -e ."
+pip install -v -e .  # or "python setup.py develop"
 ```
 
 Note:
