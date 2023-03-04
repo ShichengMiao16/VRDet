@@ -131,12 +131,6 @@ python demo/huge_image_demo.py ${IMAGE_FILE} ${CONFIG_FILE} ${CHECKPOINT_FILE} $
 	 [--device ${GPU_ID}] [--score-thr ${SCORE_THR}]
 ```
 
-Example:
-```shell
-python demo/huge_image_demo.py demo/dota_demo.png configs/vrdet/vrdet_r50_fpn_1x_dota.py \
-	 checkpoint/vrdet_r50_fpn_1x_dota.pth BboxToolkit/tools/split_configs/dota/test.json
-```
-
 ### Image demo for DIOR-R dataset
 
 `$VRDet/demo/image_demo.py` is provided to test a single image in DIOR-R dataset.
@@ -144,10 +138,4 @@ python demo/huge_image_demo.py demo/dota_demo.png configs/vrdet/vrdet_r50_fpn_1x
 ```shell
 python demo/image_demo.py ${IMAGE_FILE} ${CONFIG_FILE} ${CHECKPOINT_FILE} \
 	 [--device ${GPU_ID}] [--score-thr ${SCORE_THR}]
-```
-
-Example:
-```shell
-python demo/image_demo.py demo/dior_demo.jpg configs/vrdet/vrdet_r50_fpn_1x_dior-r.py \
-         checkpoint/vrdet_r50_fpn_1x_dior-r.pth
 ```
