@@ -102,3 +102,17 @@ However some functionality is gone in this mode:
 
 So if you try to run inference with a model containing deformable convolution, you will get an error.
 Note: We set `use_torchvision=True` on-the-fly in CPU mode for `RoIPool` and `RoIAlign`
+
+### Using VRDet with docker
+We provide a [Dockerfile](../docker/Dockerfile) to build an image. Ensure that your docker version >= 19.03.
+
+```shell
+# build an image with PyTorch 1.3.1 and CUDA 9.2
+# If you prefer other versions, just modify the Dockerfile
+docker build -t vrdet $VRDet/docker/
+```
+
+Run it with
+```shell
+docker run --gpus all --shm-size=8g -it -v ${DATA_DIR}:/VRDet/data vrdet
+```
